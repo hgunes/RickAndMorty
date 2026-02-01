@@ -10,15 +10,18 @@ import Foundation
 /// Primary API service
 final class RMService {
     
-    let shared = RMService()
+    static let shared = RMService()
     
     private init() {}
     
     /// Send Rick and Morty API calls
     /// - Parameters:
     ///   - request: Request instance
+    ///   - type: The type of object we expect to get back
     ///   - completion: Callback with data or error
-    private func excute(_ request: RMRequest, completion: @escaping () -> Void) {
+    private func excute<T: Codable>(_ request: RMRequest,
+                                    expecting type: T.Type,
+                                    completion: @escaping (Result<T, Error>) -> Void) {
         
     }
 }
