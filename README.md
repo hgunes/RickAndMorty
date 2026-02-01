@@ -1,4 +1,4 @@
-#Swift iOS - Rick and Morty App
+# Swift iOS - Rick and Morty App
 
 - MVVM pattern
 - Unit tested 
